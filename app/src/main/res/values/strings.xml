@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExerciseTestApp</string>
+    <string name="default_weight_lifting_image">Default weight lifting image</string>
+</resources>
