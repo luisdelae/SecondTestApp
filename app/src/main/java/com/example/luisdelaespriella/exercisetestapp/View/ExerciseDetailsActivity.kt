@@ -8,6 +8,8 @@ import android.util.Log
 import com.bumptech.glide.Glide
 import com.example.luisdelaespriella.exercisetestapp.Model.Exercise
 import com.example.luisdelaespriella.exercisetestapp.R
+import com.example.luisdelaespriella.exercisetestapp.R.id.image_exercise_image
+import com.example.luisdelaespriella.exercisetestapp.R.id.tv_exercise_description
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.jetbrains.anko.doAsync
@@ -23,9 +25,9 @@ class ExerciseDetailsActivity : AppCompatActivity() {
         this.getIncomingIntent()
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun getIncomingIntent() {
@@ -46,7 +48,7 @@ class ExerciseDetailsActivity : AppCompatActivity() {
             val exercise: Exercise = Gson().fromJson(jsonExercise, object: TypeToken<Exercise>(){}.type)
 
             uiThread {
-                Glide.with(it)
+                Glide.with(applicationContext)
                         .asBitmap()
                         .load(image)
                         .into(image_exercise_image)
