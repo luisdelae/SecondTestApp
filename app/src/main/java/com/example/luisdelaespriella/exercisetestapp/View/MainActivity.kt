@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getDataFromApi(): List<Exercise> {
-        val jsonResults = URL("https://wger.de/api/v2/exercise?limit=50").readText()
+        val jsonResults = URL("https://wger.de/api/v2/exercise?limit=10").readText()
 
         val results: Results = Gson().fromJson(jsonResults, object: TypeToken<Results>(){}.type)
 

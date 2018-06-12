@@ -23,6 +23,11 @@ class ExerciseDetailsActivity : AppCompatActivity() {
         this.getIncomingIntent()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
     private fun getIncomingIntent() {
         Log.d("getIncomingIntent", "Inside getIncomingIntent")
         if (intent.hasExtra("exercise_id") && intent.hasExtra("exercise_image")) {
@@ -45,7 +50,7 @@ class ExerciseDetailsActivity : AppCompatActivity() {
                         .asBitmap()
                         .load(image)
                         .into(image_exercise_image)
-                tv_exercise_name.text = exercise.name
+                supportActionBar?.title = exercise.name
                 tv_exercise_description.text = exercise.description
             }
         }
