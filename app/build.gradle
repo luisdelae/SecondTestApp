@@ -27,8 +27,13 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    // Anko - Async requests
     implementation "org.jetbrains.anko:anko-commons:0.10.4"
+
+    // Gson - JSON parser
     implementation 'com.google.code.gson:gson:2.8.2'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -36,10 +41,10 @@ dependencies {
     // Recyclerview
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
-    //Glide
+    //Glide - Image handler
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
-    // Circle Imageview
+    // Circle Imageview - Circular image views
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 }

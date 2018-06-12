@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Results(
         @SerializedName("results")
-        val Exercises: List<Exercise>
+        val Exercises: MutableList<Exercise>
 )
 
 data class Exercise(
